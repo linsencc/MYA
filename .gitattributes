@@ -1,0 +1,6 @@
+# 统一换行，减少 Windows 上工具混用 CRLF/LF 导致的异常 git 状态（路径显示重复等）
+* text=auto
+src/**/*.ts text eol=lf
+src/**/*.tsx text eol=lf
+src/**/*.json text eol=lf
+src/**/*.css text eol=lf

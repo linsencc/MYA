@@ -1,0 +1,56 @@
+# ── 密钥 / 本地环境变量（不进版本库）──────────────────────
+# 仓库根目录常见密钥文件名（若存在）
+.keys
+.env
+.env.local
+.env.*.local
+
+# Node / Next
+node_modules/
+.next/
+*.tsbuildinfo
+
+# Python (legacy / local tools)
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# legacy single-line token file
+.key
+
+# LLM pipeline NDJSON（本地排查，不进库）
+logs/
+data/logs/
+
+# 运行时数据（见 src/lib/paths.ts dataRoot）
+data/cache/
+data/output/
+data/saves/*.json
+data/saves/.runtime/
+data/game/
+
+# 旧版单根 config/ 下运行时路径（迁移后若本地仍保留可避免误提交）
+config/output/
+config/model_version_cache/
+config/saves/*.json
+config/saves/.runtime/
+config/game/saves/*.json
+config/game/saves/.runtime/
+
+# legacy layout (pre-flatten)
+data/game/saves/*.json
+data/game/saves/.runtime/
+
+# pre-data/ layout (left ignored so stray copies do not get committed)
+output/
+model_version_cache/
+game/saves/*.json
+game/saves/.runtime/

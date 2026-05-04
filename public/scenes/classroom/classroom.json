@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "classroom",
+  "display_name": "教室",
+  "aliases": [
+    "教室",
+    "放学后的教室"
+  ],
+  "layout_pg_en": "fixed anime classroom set: teacher podium anchored front-left corner, extra-large green chalkboard centered on back wall as single focal plane, exactly three tall vertical windows clustered only on right wall pouring warm sideways light, pale wood herringbone floor reflecting soft highlights, four neat parallel rows of student desks facing board with consistent spacing, muted cream wall paint, overhead fluorescent complemented by daylight, rigid single-point perspective locking vanishing point to board center — same footprint, wall colors and prop positions every shot",
+  "layout_nsfw_en": "",
+  "variants_by_time": {
+    "傍晚": "same geometry as daytime: three tall windows on right wall now admit saturated amber sunset with long soft shadows across the floor, room may read empty and hushed after classes, furniture positions unchanged",
+    "晚上": "same footprint: interior fluorescent dominates, windows read dark blue twilight outside, desks in soft reflected light, quiet after-hours stillness"
+  },
+  "venue": {
+    "narrative_tone": "同一教室空间：上课时段以板书、点名、过道答疑为主轴；傍晚至夜间可过渡为净空或留校（补课、收作业、独处对谈），张力可比白天略高，仍以「师生在场」逻辑自洽为先。好感与试探可通过视线、低声对话、课后留堂展开；避免突然转到私密性行为叙事，除非剧情与数值早已铺垫。",
+    "allow_risk_choices": true,
+    "cg_policy": {
+      "explicit_hint": "公开场合：默认 cg_explicit=false；仅当叙事已无可回避地进入裸露且符合全局门槛时才考虑 true。"
+    }
+  },
+  "world_travel_id": "classroom",
+  "travel_label": "教室",
+  "world_travel_order": 1,
+  "world_cg_src": "/scenes/classroom/bg_classroom.png",
+  "world_cg_by_time_slot": {
+    "0": "/scenes/classroom/bg_classroom_time_dawn.png",
+    "1": "/scenes/classroom/bg_classroom_time_morning.png",
+    "2": "/scenes/classroom/bg_classroom_time_noon.png",
+    "3": "/scenes/classroom/bg_classroom_time_golden_hour.png",
+    "4": "/scenes/classroom/bg_classroom_time_late_afternoon.png",
+    "5": "/scenes/classroom/bg_classroom_time_night.png"
+  },
+  "world_card_summary": "日照与粉笔灰的日常轴心；傍晚留室时斜阳与空椅让沉默更烫。",
+  "bg_checkpoint_version_id": 1915059,
+  "bg_resolution": {
+    "width": 1536,
+    "height": 896
+  }
+}

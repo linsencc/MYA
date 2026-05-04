@@ -1,0 +1,51 @@
+/** OpenRouter `provider/model` slug，展示名便于中文界面扫读 */
+export const OPENROUTER_MODEL_PRESETS: { id: string; label: string }[] = [
+  { id: "x-ai/grok-4-fast", label: "xAI Grok 4 Fast（推荐·省延迟）" },
+  { id: "x-ai/grok-3-mini", label: "xAI Grok 3 Mini" },
+  { id: "openai/gpt-4o-mini", label: "OpenAI GPT-4o mini" },
+  { id: "openai/gpt-4o", label: "OpenAI GPT-4o" },
+  { id: "openai/gpt-4.1-mini", label: "OpenAI GPT-4.1 mini" },
+  { id: "openai/gpt-4.1", label: "OpenAI GPT-4.1" },
+  { id: "openai/gpt-4-turbo", label: "OpenAI GPT-4 Turbo" },
+  { id: "anthropic/claude-3.5-haiku", label: "Anthropic Claude 3.5 Haiku" },
+  { id: "anthropic/claude-3.7-sonnet", label: "Anthropic Claude 3.7 Sonnet" },
+  { id: "anthropic/claude-sonnet-4", label: "Anthropic Claude Sonnet 4" },
+  { id: "google/gemini-2.0-flash-001", label: "Google Gemini 2.0 Flash" },
+  { id: "google/gemini-2.5-flash-preview-05-20", label: "Google Gemini 2.5 Flash（预览）" },
+  { id: "google/gemini-2.5-pro-preview-05-06", label: "Google Gemini 2.5 Pro（预览）" },
+  { id: "meta-llama/llama-3.3-70b-instruct", label: "Meta Llama 3.3 70B Instruct" },
+  { id: "meta-llama/llama-3.1-8b-instruct", label: "Meta Llama 3.1 8B Instruct" },
+  { id: "deepseek/deepseek-chat", label: "DeepSeek V3 Chat" },
+  { id: "deepseek/deepseek-r1", label: "DeepSeek R1" },
+  { id: "mistralai/mistral-small-3.1-24b-instruct-2503", label: "Mistral Small 3.1 24B" },
+  { id: "qwen/qwen-2.5-72b-instruct", label: "Qwen 2.5 72B Instruct" },
+  { id: "qwen/qwen2.5-vl-72b-instruct", label: "Qwen 2.5 VL 72B（多模态）" },
+];
+
+export const OPENAI_MODEL_PRESETS: { id: string; label: string }[] = [
+  { id: "gpt-4o-mini", label: "gpt-4o-mini（默认档·便宜）" },
+  { id: "gpt-4o", label: "gpt-4o" },
+  { id: "gpt-4.1-mini", label: "gpt-4.1 mini" },
+  { id: "gpt-4.1", label: "gpt-4.1" },
+  { id: "gpt-4-turbo", label: "gpt-4-turbo" },
+  { id: "gpt-3.5-turbo", label: "gpt-3.5-turbo" },
+  { id: "o4-mini", label: "o4-mini（推理）" },
+  { id: "o3-mini", label: "o3-mini（推理）" },
+  { id: "o1-mini", label: "o1-mini（推理）" },
+];
+
+export const OLLAMA_MODEL_PRESETS: { id: string; label: string }[] = [
+  { id: "qwen2:7b", label: "Qwen2 7B" },
+  { id: "qwen2.5:7b", label: "Qwen2.5 7B" },
+  { id: "qwen2.5:14b", label: "Qwen2.5 14B" },
+  { id: "qwen2.5:32b", label: "Qwen2.5 32B" },
+  { id: "llama3.2:3b", label: "Llama 3.2 3B" },
+  { id: "llama3.1:8b", label: "Llama 3.1 8B" },
+  { id: "llama3.1:70b", label: "Llama 3.1 70B" },
+  { id: "mistral:7b", label: "Mistral 7B" },
+  { id: "mixtral:8x7b", label: "Mixtral 8x7B" },
+  { id: "deepseek-r1:8b", label: "DeepSeek R1 8B" },
+  { id: "deepseek-r1:14b", label: "DeepSeek R1 14B" },
+  { id: "gemma2:9b", label: "Gemma 2 9B" },
+  { id: "phi3:medium", label: "Phi-3 Medium" },
+];

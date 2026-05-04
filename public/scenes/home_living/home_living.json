@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "home_living",
+  "display_name": "玩家的家（客厅）",
+  "aliases": [
+    "玩家的家",
+    "玩家家",
+    "我自己的家",
+    "我家",
+    "自己家里",
+    "客厅"
+  ],
+  "layout_pg_en": "fixed protagonist modest apartment living room: worn fabric sofa along left wall with game controller and snack bag on cushion, low coffee table with textbooks and phone cable, modest TV on matte wall, tall bookshelf with mixed manga and school handouts, warm floor lamp cone in corner — same furniture footprint, casual student clutter silhouette every shot, clearly a student's own flat not a teacher's tidy apartment",
+  "layout_nsfw_en": "",
+  "venue": {
+    "narrative_tone": "主人公自己的住处：放学回家、周末独处、线上约人线下碰头的起点。与「陈悦的家」严格区分——此处是玩家空间，勿把陈老师私宅布置写进这里；泛化室内或未点名地点时叙事可自然落回此处。",
+    "allow_risk_choices": true,
+    "cg_policy": {}
+  },
+  "world_cg_src": "/scenes/home_living/bg_home_living.png",
+  "world_cg_by_time_slot": {
+    "0": "/scenes/home_living/bg_home_living_time_dawn.png",
+    "1": "/scenes/home_living/bg_home_living_time_morning.png",
+    "2": "/scenes/home_living/bg_home_living_time_afternoon.png",
+    "3": "/scenes/home_living/bg_home_living_time_afternoon.png",
+    "4": "/scenes/home_living/bg_home_living_time_golden_hour.png",
+    "5": "/scenes/home_living/bg_home_living_time_night.png"
+  },
+  "world_card_summary": "你的沙发与台灯：关上门才是自己的节奏。",
+  "bg_checkpoint_version_id": 1915059,
+  "bg_resolution": {
+    "width": 1536,
+    "height": 896
+  }
+}

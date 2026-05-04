@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "rooftop",
+  "display_name": "天台",
+  "aliases": ["天台", "楼顶", "屋顶平台"],
+  "layout_pg_en": "fixed school rooftop: waist-high tubular steel railing continuous along visible roof edge, small concrete utility shed with vent pipes on left rear casting short shadow, metal access door behind camera-left marked staff-only, rough concrete deck with drainage grate, open sky occupying upper third — same railing height, shed silhouette and horizon line every shot",
+  "layout_nsfw_en": "",
+  "venue": {
+    "narrative_tone": "风声与远景放大情绪：适合对峙、坦白或高风险试探；远处教学楼窗户可作为「可能被看见」的伏笔。独处须与信任/冷战状态一致，勿一键写成真空世界。",
+    "allow_risk_choices": true,
+    "cg_policy": {
+      "explicit_hint": "裸露向须严格服从 cg_explicit 与全局数值门槛；天台并非绝对私密。"
+    }
+  },
+  "world_travel_id": "rooftop",
+  "travel_label": "天台",
+  "world_travel_order": 4,
+  "world_cg_src": "/scenes/rooftop/bg_rooftop.png",
+  "world_cg_by_time_slot": {
+    "0": "/scenes/rooftop/bg_rooftop_time_dawn.png",
+    "1": "/scenes/rooftop/bg_rooftop_time_morning.png",
+    "2": "/scenes/rooftop/bg_rooftop_time_noon.png",
+    "3": "/scenes/rooftop/bg_rooftop_time_afternoon.png",
+    "4": "/scenes/rooftop/bg_rooftop_time_golden_hour.png",
+    "5": "/scenes/rooftop/bg_rooftop_time_night.png"
+  },
+  "world_card_summary": "栏杆与风声：台词再轻也会被心跳盖过去。"
+}

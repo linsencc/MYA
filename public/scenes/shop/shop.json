@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "shop",
+  "display_name": "校内商店",
+  "aliases": [
+    "校内商店",
+    "商店",
+    "小卖部",
+    "便利店",
+    "小卖铺",
+    "学校商店"
+  ],
+  "layout_pg_en": "fixed small school convenience interior: checkout counter with register anchored front-left, tall metal-wire snack shelves centered on back wall in strict rows, glass-door refrigerated drink cooler on right wall emitting cool cyan spill light, warm overhead fluorescent grid, pale linoleum floor with soft speculars, narrow aisle depth readable — same counter footprint, shelf bay count and cooler position every shot",
+  "layout_nsfw_en": "",
+  "variants_by_time": {
+    "傍晚": "same layout: exterior twilight barely visible through any door glass, interior fluorescents slightly warmer against cooling daylight, long soft shadows in aisle",
+    "晚上": "same footprint: fluorescents dominate, cooler glow stronger, windows or doorway read dark outside, quiet late-hour emptiness"
+  },
+  "venue": {
+    "narrative_tone": "货架与收银台之间的公开半私密：适合偶遇、请客、借零钱、递东西时指尖擦过。人流量可高可低，叙事需尊重「店内可能有店员或其他学生」；暧昧以低声、遮挡视线、排队前后为主，避免一键写成真空。",
+    "allow_risk_choices": true,
+    "cg_policy": {
+      "explicit_hint": "营业场所：默认 cg_explicit=false；裸露向须与剧情与全局门槛一致且店员/顾客状态自洽。"
+    }
+  },
+  "unlock": {
+    "min_chapter": 1,
+    "min_intimacy": 0,
+    "min_desire": 0,
+    "min_trust": 0,
+    "required_flag_keys": [],
+    "forbidden_flag_keys": []
+  },
+  "world_travel_id": "shop",
+  "travel_label": "校内商店",
+  "world_travel_order": 10,
+  "world_cg_src": "/scenes/shop/bg_shop.png",
+  "world_cg_by_time_slot": {
+    "0": "/scenes/shop/bg_shop_time_dawn.png",
+    "1": "/scenes/shop/bg_shop_time_morning.png",
+    "2": "/scenes/shop/bg_shop_time_noon.png",
+    "3": "/scenes/shop/bg_shop_time_golden_hour.png",
+    "4": "/scenes/shop/bg_shop_time_late_afternoon.png",
+    "5": "/scenes/shop/bg_shop_time_night.png"
+  },
+  "world_card_summary": "冰柜嗡鸣与零食袋沙沙声：话题可以装得很日常。",
+  "bg_resolution": {
+    "width": 1536,
+    "height": 896
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "teacher_home",
+  "display_name": "陈悦的家",
+  "aliases": ["老师的家", "陈悦的家", "老师家", "陈悦家"],
+  "layout_pg_en": "fixed modest teacher apartment entry-living open plan: slim shoe cabinet immediately right of door with two sneakers visible, short corridor opening into compact living-dining combo, round dining table with two mismatched chairs near kitchenette counter, sofa pushed against far wall beneath window with semi-sheer curtains, warm tungsten floor lamp washing sofa fabric, tidy minimal decor with framed student artwork crooked — identical room geometry, curtain fold and lamp cone every shot",
+  "layout_nsfw_en": "fixed same teacher apartment layout as PG: curtains drawn against night, single warm lamp pool, faint kitchen LED strip off, intimate quiet air without altering furniture positions",
+  "venue": {
+    "narrative_tone": "陈悦的私宅：家访、包扎、喝茶、深夜短信后续。可与「玩家的家」区分——勿把主人公公寓的杂物与动线写进此处；可有长辈短镜头经过走廊或厨房响声，避免写成彻底无人知晓的真空亲密。",
+    "allow_risk_choices": true,
+    "cg_policy": {
+      "explicit_hint": "家中更私密，但 cg_explicit 仍遵守全局：仅正文已明确裸露或性行为时才 true。"
+    }
+  },
+  "unlock": {
+    "min_chapter": 7,
+    "min_intimacy": 0,
+    "min_desire": 0,
+    "min_trust": 0,
+    "required_flag_keys": [],
+    "forbidden_flag_keys": []
+  },
+  "world_cg_src": "/scenes/teacher_home/bg_teacher_home.png",
+  "world_cg_by_time_slot": {
+    "0": "/scenes/teacher_home/bg_teacher_home_time_dawn.png",
+    "1": "/scenes/teacher_home/bg_teacher_home_time_morning.png",
+    "2": "/scenes/teacher_home/bg_teacher_home_time_noon.png",
+    "3": "/scenes/teacher_home/bg_teacher_home_time_noon.png",
+    "4": "/scenes/teacher_home/bg_teacher_home_time_golden_hour.png",
+    "5": "/scenes/teacher_home/bg_teacher_home_time_night.png"
+  },
+  "world_card_summary": "门槛内外两种温度：拖鞋、茶壶与未曾对人说过的话。"
+}

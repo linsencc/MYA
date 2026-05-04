@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "office",
+  "display_name": "办公室",
+  "aliases": ["办公室"],
+  "layout_pg_en": "fixed teacher office set: heavy wooden desk centered on back wall with inbox tray and pen cup, tall steel-gray bookshelves symmetric left and right loaded with binders, frosted glass door with aluminum frame on far left leading to corridor, ergonomic rolling chair behind desk, overhead fluorescent plus desk lamp cone on papers — same desk footprint, shelf heights and door position every shot",
+  "layout_nsfw_en": "",
+  "venue": {
+    "narrative_tone": "职场与私人边界叠加：订正作业、约谈、咖啡与打印纸的气味。同事可能在门外咳嗽、主任路过窗口；暧昧宜克制推进，不宜默认长时间无人打扰的密闭甜宠。",
+    "allow_risk_choices": true,
+    "cg_policy": {}
+  },
+  "world_travel_id": "teacher_office",
+  "travel_label": "教师办公室",
+  "world_travel_order": 2,
+  "world_cg_src": "/scenes/office/bg_office.png",
+  "world_cg_by_time_slot": {
+    "0": "/scenes/office/bg_office_time_dawn.png",
+    "1": "/scenes/office/bg_office_time_morning.png",
+    "2": "/scenes/office/bg_office_time_noon.png",
+    "3": "/scenes/office/bg_office_time_afternoon.png",
+    "4": "/scenes/office/bg_office_time_golden_hour.png",
+    "5": "/scenes/office/bg_office_time_night.png"
+  },
+  "world_card_summary": "纸张与咖啡香：试探、分寸与「能不能关门」的微妙拉扯。"
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "playground",
+  "display_name": "操场",
+  "aliases": ["操场", "运动场", "体育场"],
+  "layout_pg_en": "fixed school sports ground: crushed red rubber running track forming smooth oval loop, lush green soccer pitch with white center circle and penalty lines inside, chain-link fence with concrete posts around perimeter, small bleachers on near side, main school building block visible in distant background left — same curve radii, line geometry and horizon every shot",
+  "layout_nsfw_en": "fixed school sports ground same layout as daytime: floodlights off, empty field after hours, cooler air, long violet shadows stretching across track, identical fence posts and bleacher silhouette for continuity with PG shots",
+  "venue": {
+    "narrative_tone": "开阔与曝光：跑步、散心、看台边递水。亲密或高刺激剧情需交代人烟与天色；裸露/情欲向叙事与 cg_explicit 必须服从全局规则，禁止为出图硬写未发生的事实。",
+    "allow_risk_choices": true,
+    "cg_policy": {
+      "explicit_hint": "公共场所：除非正文已明确推进且 cg_explicit 在全局下允许，否则保持 false。"
+    }
+  },
+  "world_cg_src": "/scenes/playground/bg_playground.png",
+  "world_cg_by_time_slot": {
+    "0": "/scenes/playground/bg_playground_time_dawn.png",
+    "1": "/scenes/playground/bg_playground_time_morning.png",
+    "2": "/scenes/playground/bg_playground_time_noon.png",
+    "3": "/scenes/playground/bg_playground_time_afternoon.png",
+    "4": "/scenes/playground/bg_playground_time_golden_hour.png",
+    "5": "/scenes/playground/bg_playground_time_night.png"
+  },
+  "world_card_summary": "跑道与看台：心事可以跑一圈再讲，也可以不讲。"
+}

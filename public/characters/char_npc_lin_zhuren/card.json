@@ -1,0 +1,58 @@
+{
+  "名称": "林志远",
+  "说明": "林志远（职务称林主任）：教务处干部；严肃、话少，走廊偶遇或开会时出现。配偶林慧茹。出图卡按男性外貌固化。",
+  "阵容外貌": "深灰西装、白衬衫与领带；短发男性，教务正装",
+  "模型": "aMixIllustrious_aMix",
+  "模型版本ID": 1915059,
+  "模型文件备注": "Civitai checkpoint A-mix [Illustrious] model-versions/1915059",
+  "clip_skip": 2,
+  "分辨率": {
+    "width": 1536,
+    "height": 2304
+  },
+  "固化": {
+    "画风与质量": "masterpiece, best quality, very aesthetic, ultra detailed, depth of field, 8k uhd",
+    "身材与体态": "adult man, broad shoulders, average build, mature male body",
+    "容貌与发型": "asian man, short black hair, side part, stern brown eyes, clean shaven, faint forehead lines, fair skin, 45 years old",
+    "气质与年龄感": "school administrator, strict but fair, professional male, formal posture, aged up, not child"
+  },
+  "服装固化": {
+    "_注释": "cg.py 按此顺序拼成固定 outfit tags，置于 cg_scene 之前；LLM 严禁在 cg_scene 中重写服装",
+    "上衣": "dark grey suit jacket, white dress shirt, dark tie, formal",
+    "下装": "matching suit trousers, pressed crease",
+    "腿部": "black dress socks",
+    "鞋履": "black leather oxford shoes",
+    "配饰": "simple belt, wristwatch",
+    "锁定约束": "fully clothed, consistent outfit, same clothes, male formal suit"
+  },
+  "场景固化": {
+    "_注释": "每张 CG 都会加在 cg_scene 之后，固化画风氛围，不含服装",
+    "通用": "cinematic lighting, film grain, bokeh, professional photography, high detail face, perfect detailed eyes, realistic iris and pupils"
+  },
+  "触发词与嵌入": {
+    "LoRA触发词": "",
+    "Textual_Inversion": ""
+  },
+  "技术辅助": {
+    "LoRA": [],
+    "常用_seed": 110022334455660
+  },
+  "参考素材": {
+    "主参考图或文件夹": "",
+    "角色表三视图": "",
+    "多角度面部": ""
+  },
+  "出图配方_默认值": {
+    "sampler": "Euler a",
+    "steps": 30,
+    "cfg": 6,
+    "vae": ""
+  },
+  "负面提示词_通用": "lowres, worst quality, low quality, bad anatomy, bad hands, deformed, extra limbs, blurry, jpeg artifacts, watermark, text, signature, logo, censored, bar censor, mosaic censor, extra fingers, missing fingers, bad proportions, bad perspective",
+  "负面提示词_外貌纠错": "woman, female, breasts, cleavage, long feminine hair, lipstick, heavy makeup, skirt as main subject, child, loli, shota, toddler, baby face, teen girl, old man, hunched, beard, mustache, long beard, sunglasses indoors, 2boys, multiple men, deformed eyes, weird eyes, crossed eyes, mismatched eyes, blurry eyes, doll eyes, anime eyes, cartoony eyes",
+  "负面提示词_服装纠错": "different outfit, casual clothes, t-shirt, hoodie, jeans, shorts, sportswear, nude, naked, schoolgirl uniform, dress",
+  "版本": {
+    "更新日期": "2026-05-03",
+    "变更摘要": "名称改为本名林志远；说明补配偶林慧茹"
+  }
+}

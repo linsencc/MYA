@@ -1,0 +1,53 @@
+---
+description: 修改 Next 游戏源码后由 Agent 自行重启本地 Node 游戏服务，确保界面与逻辑生效
+alwaysApply: true
+---
+
+# MyA：改代码后重启游戏服务
+
+在当次任务中修改了 **`src/`**（游戏 UI、API、`src/lib/game`、`src/lib/sdk` 等）、**`package.json`** 或影响 `npm run start` / `npm run dev` 的配置后，**必须由 Agent 在本机自行重启** Next.js 服务，不要假定用户会手动重启。
+
+## 必须做到
+
+1. **工作目录**：项目根目录（MyA 根，含 `package.json`、`src/`）。
+2. **先停后启**：若已有进程占用 **`GAME_PORT`**（默认 **7860**，见 `scripts/run-next-start.mjs`），先结束对应 Node 进程，再启动，避免浏览器仍连到旧进程。
+   - Windows PowerShell：`Get-NetTCPConnection -LocalPort 7860 | Select -Expand OwningProcess | ForEach-Object { Stop-Process -Id $_ -Force }`
+3. **验证（verify）**：在仓库根执行 `npm run verify`，须以退出码 **0** 结束（内含 `next build` + 临时端口 HTTP 冒烟）。若失败，先修再交付。
+4. **启动（start）**：verify 成功后 `.next` 已就绪，**直接** `npm run start` 即可，不要再删 `.next`、再跑一次 build。
+   - 启动前再次结束占用 7860 的进程（verify 内部会起临时端口，不影响 7860）。
+5. **禁止**：verify 和 start 之间**不要**执行 `rd /s /q .next` 或任何删 `.next` 的操作；删后再 start 会因无构建产物而 exit 1。
+6. **回复用户**：说明访问地址（如 `http://127.0.0.1:7860`）与端口。
+
+## 标准操作序列（Windows PowerShell）
+
+```powershell
+# 1. 结束占用 7860 的进程
+Get-NetTCPConnection -LocalPort 7860 -ErrorAction SilentlyContinue |
+  Select-Object -ExpandProperty OwningProcess -Unique |
+  ForEach-Object { Stop-Process -Id $_ -Force -ErrorAction SilentlyContinue }
+
+# 2. verify（内含 build + 冒烟）
+npm run verify
+
+# 3. 若 verify exit 0，再次清端口后启动
+Get-NetTCPConnection -LocalPort 7860 -ErrorAction SilentlyContinue |
+  Select-Object -ExpandProperty OwningProcess -Unique |
+  ForEach-Object { Stop-Process -Id $_ -Force -ErrorAction SilentlyContinue }
+npm run start   # 后台启动
+```
+
+## 构建偶发 ENOENT 的处理（OneDrive / 同步盘）
+
+若 `next build` 在 "Collecting build traces" 阶段报 `ENOENT: *.nft.json / pages-manifest.json`：
+
+1. **先**结束所有占用 `.next` 的进程（占用期间 PowerShell `Remove-Item` 会失败，改用 `cmd /c "rd /s /q .next"`）。
+2. 再 `npm run verify`（内含完整 build）。
+3. **不要**在 verify 成功后再删 `.next` 然后 start——这会重现问题。
+
+`next.config.ts` 已固化以下两项以减轻此问题：
+- `experimental.webpackBuildWorker: false`（关闭多进程 trace 写入竞态）
+- `webpack: config.cache = false`（关闭生产构建持久化缓存，避免同步盘 .pack 锁争用）
+
+## 可跳过重启的情况
+
+仅改文档、`.gitignore`、与运行时无关的资源说明等，且不影响 Next 应用行为（若改动了 `scripts/verify-game-app.ts`，仍建议跑 `npm run verify`）。

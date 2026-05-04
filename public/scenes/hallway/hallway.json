@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "hallway",
+  "display_name": "走廊",
+  "aliases": ["走廊", "教学楼走廊"],
+  "layout_pg_en": "fixed school interior corridor: continuous metal lockers on right wall, evenly spaced classroom doors with frosted glass panels on left, long one-point perspective to distant stairwell glow, pale linoleum with scuff marks, cool fluorescent ceiling strips with occasional dead tube — same door rhythm, ceiling height and wall color every shot",
+  "layout_nsfw_en": "",
+  "venue": {
+    "narrative_tone": "过渡与曝光：擦肩、叫住、递纸条、刻意压低声音。路人、同事或学生一句带过即可抬高「被看见」的张力；不宜写成长时间无人经过的真空走廊甜宠。",
+    "allow_risk_choices": false,
+    "cg_policy": {}
+  },
+  "world_travel_id": "corridor",
+  "travel_label": "教学楼走廊",
+  "world_travel_order": 3,
+  "world_cg_src": "/scenes/hallway/bg_hallway.png",
+  "world_cg_by_time_slot": {
+    "0": "/scenes/hallway/bg_hallway_time_dawn.png",
+    "1": "/scenes/hallway/bg_hallway_time_morning.png",
+    "2": "/scenes/hallway/bg_hallway_time_morning.png",
+    "3": "/scenes/hallway/bg_hallway_time_late_afternoon.png",
+    "4": "/scenes/hallway/bg_hallway_time_golden_hour.png",
+    "5": "/scenes/hallway/bg_hallway_time_night.png"
+  },
+  "world_card_summary": "人来人往的过渡带：一句话、一眼神都要算好音量与距离。"
+}

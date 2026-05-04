@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "school_grounds",
+  "display_name": "校园户外",
+  "aliases": ["屋外", "校园", "校园户外", "室外"],
+  "layout_pg_en": "fixed school exterior grounds: curved concrete pedestrian path bordered by low box hedges, mature tree line on left with dappled shadow, beige classroom block facade on right with repeating window grid, open pale blue sky with faint contrail — same path curvature, tree massing and building cornice height every shot",
+  "layout_nsfw_en": "",
+  "venue": {
+    "narrative_tone": "楼与树之间的微风道：偶遇、送别、装作没看见都很合理。人流量与远处哨声可作节奏锚点，避免写成无人校园。",
+    "allow_risk_choices": true,
+    "cg_policy": {}
+  },
+  "world_cg_src": "/scenes/school_grounds/bg_school_grounds.png",
+  "world_cg_by_time_slot": {
+    "0": "/scenes/school_grounds/bg_school_grounds_time_dawn.png",
+    "1": "/scenes/school_grounds/bg_school_grounds_time_morning.png",
+    "2": "/scenes/school_grounds/bg_school_grounds_time_morning.png",
+    "3": "/scenes/school_grounds/bg_school_grounds_time_late_afternoon.png",
+    "4": "/scenes/school_grounds/bg_school_grounds_time_golden_hour.png",
+    "5": "/scenes/school_grounds/bg_school_grounds_time_night.png"
+  },
+  "world_card_summary": "离开教学楼后的第一节台阶：话题可以变轻，也可以突然变重。"
+}

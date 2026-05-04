@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "library",
+  "display_name": "图书馆",
+  "aliases": ["图书馆"],
+  "layout_pg_en": "fixed school library interior: parallel tall oak-color bookshelves forming a straight central aisle vanishing to soft backlight, long communal reading tables midground with scattered paper corners, large windows only on left wall admitting cool daylight, brass desk lamps with green shades on tables, rubber-footed silence — same aisle width, shelf rhythm and window grid every shot",
+  "layout_nsfw_en": "",
+  "venue": {
+    "narrative_tone": "安静与视线：适合资料检索、偶遇座、压低声音的争执或和解。冲突需控制音量；不宜突发高音量告白破坏场所感。",
+    "allow_risk_choices": true,
+    "cg_policy": {}
+  },
+  "world_cg_src": "/scenes/library/bg_library.png",
+  "world_cg_by_time_slot": {
+    "0": "/scenes/library/bg_library_time_dawn.png",
+    "1": "/scenes/library/bg_library_time_morning.png",
+    "2": "/scenes/library/bg_library_time_noon.png",
+    "3": "/scenes/library/bg_library_time_afternoon.png",
+    "4": "/scenes/library/bg_library_time_golden_hour.png",
+    "5": "/scenes/library/bg_library_time_night.png"
+  },
+  "world_card_summary": "书架之间的窄光：谁翻页，谁就知道对方呼吸有多近。"
+}

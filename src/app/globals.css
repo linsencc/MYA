@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --rose: #e11d48;
+  --slate: #64748b;
+  --bg: #0f1419;
+  --panel: #1a222c;
+  --text: #e8eef4;
+  --muted: #94a3b8;
+}
+
+/* 预留纵向滚动槽避免布局跳变；用深色细滚动条让槽在暗色背景下不显眼 */
+html {
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 116, 139, 0.35) transparent;
+}
+
+body {
+  color: var(--text);
+  background-color: #0d1117;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeBlend in='SourceGraphic' mode='multiply'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E"),
+    linear-gradient(165deg, #121820 0%, #0d1117 45%, #151c24 100%);
+  min-height: 100vh;
+}
+
+.game-title h1 {
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background: linear-gradient(90deg, #fda4af, #fb7185);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.story-html {
+  line-height: 1.78;
+  font-size: 1.02rem;
+  scrollbar-gutter: stable;
+}
+
+.story-html-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.35) transparent;
+}
+
+.story-html-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.story-html-scroll::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 999px;
+}
+
+.story-html.thinking {
+  color: var(--muted);
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+.stat-track {
+  flex: 1;
+  height: 8px;
+  background: #2d3748;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.stat-track-toned {
+  background: rgba(30, 41, 59, 0.85);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.stat-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.35s ease;
+}
+
+.top-chips {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+  gap: 0.45rem;
+  margin-bottom: 0;
+}
+
+@media (min-width: 640px) {
+  .top-chips {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .top-chips {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* 左侧情境卡：略增列数，减轻长标签挤一行 */
+.top-chips-dense {
+  grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr));
+}
+
+@media (min-width: 640px) {
+  .top-chips-dense {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  padding: 0.28rem 0.6rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  font-size: 0.75rem;
+  min-width: 0;
+}
+
+.chip span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chip-k {
+  color: var(--muted);
+}
+
+.game-console {
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  background: #0a0e14;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  min-height: 140px;
+  max-height: min(28vh, 260px);
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: #9ca3af;
+}
+
+@media (min-width: 1024px) {
+  .game-console {
+    max-height: min(32vh, 300px);
+  }
+}
+
+/* 吸底控制台：限制高度，避免挡主内容（主区域用 pb-game-console 留白） */
+.game-console-docked {
+  max-height: min(24vh, 220px) !important;
+  min-height: 100px;
+}
+
+.pb-game-console {
+  padding-bottom: min(28vh, 260px);
+}
+
+@media (min-width: 1024px) {
+  .pb-game-console {
+    padding-bottom: min(26vh, 240px);
+  }
+}
+
+.chip-adult {
+  background: rgba(225, 29, 72, 0.22);
+  color: #fda4af;
+  font-size: 0.72rem;
+}
+
+/* 左侧栏状态区：略紧凑，与 CG 同列 */
+.stats-panel-compact .stat-row {
+  margin: 0.28rem 0;
+}

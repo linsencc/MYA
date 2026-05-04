@@ -1,0 +1,12 @@
+---
+description: 叙事 LLM pipeline 日志已落盘；排查截断等问题时 Agent 直接读 logs 而非让用户粘贴终端
+alwaysApply: true
+---
+
+# MyA：叙事 pipeline 日志在磁盘上
+
+服务端会把 **`[game:pipeline]`** 全文链路日志写入 **`data/logs/game-pipeline-YYYY-MM-DD.ndjson`**（`dataRoot()` 下，NDJSON，一行一条 JSON）。**文件名中的日期与每条记录的 `ts` 均为 Asia/Shanghai（北京，UTC+8）**；同条另有 **`ts_utc`**（UTC ISO）便于与上游时间对照。关掉落盘：**`GAME_PIPELINE_LOG=0`**（仓库根 `.keys`）。
+
+## Agent 该怎么做
+
+在排查叙事截断、JSON 解析失败、紧凑重试、上游 `finish_reason` 等问题时：**优先用 Read 工具读取当天的 `data/logs/game-pipeline-*.ndjson`**，按需从文件尾部或按 `stage`/`04_llm` 检索——**不要反复说明「请你贴日志」**，除非文件不存在、`GAME_PIPELINE_LOG` 关了、或磁盘无记录再请用户补充。

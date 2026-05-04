@@ -1,0 +1,32 @@
+{
+  "name": "mya",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "node scripts/run-next-start.mjs",
+    "verify": "tsx scripts/gameplay-regression.ts && tsx scripts/verify-game-app.ts",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@openrouter/sdk": "^0.12.15",
+    "civitai": "^0.1.15",
+    "next": "^15.5.15",
+    "openai": "^6.34.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.24.0",
+    "eslint-config-next": "^15.5.15",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  }
+}

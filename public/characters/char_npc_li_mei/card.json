@@ -1,0 +1,58 @@
+{
+  "名称": "李梅",
+  "说明": "李梅：语文组同事；肩长发偏分、无眼镜；浅色上衣与灰裙，相较陈悦更易显得随和亲近；试探型配角，用于多角色状态与聚焦切换测试。",
+  "阵容外貌": "浅蓝衬衫、灰色铅笔裙与丝袜；披肩侧分长发，无眼镜",
+  "模型": "aMixIllustrious_aMix",
+  "模型版本ID": 1915059,
+  "模型文件备注": "Civitai checkpoint A-mix [Illustrious] model-versions/1915059",
+  "clip_skip": 2,
+  "分辨率": {
+    "width": 1536,
+    "height": 2304
+  },
+  "固化": {
+    "画风与质量": "masterpiece, best quality, very aesthetic, ultra detailed, depth of field, 8k uhd",
+    "身材与体态": "adult woman, medium breasts, slim waist, mature female body, hourglass figure",
+    "容貌与发型": "asian, brown eyes, dark brown hair, shoulder-length hair, side part, no glasses, fair skin, subtle makeup, mature female, 30 years old",
+    "气质与年龄感": "office lady, teacher, mature female, elegant, professional appearance, 30 years old, aged up, not loli"
+  },
+  "服装固化": {
+    "_注释": "cg.py 按此顺序拼成固定 outfit tags，置于 cg_scene 之前；LLM 严禁在 cg_scene 中重写服装",
+    "上衣": "light blue blouse, long sleeves, modest neckline",
+    "下装": "grey pencil skirt, knee-length",
+    "腿部": "black pantyhose, black sheer stockings, legwear",
+    "鞋履": "black low-heel pumps, closed-toe shoes, formal shoes",
+    "配饰": "thin silver wristwatch, small silver stud earrings",
+    "锁定约束": "fully clothed, consistent outfit, same clothes"
+  },
+  "场景固化": {
+    "_注释": "每张 CG 都会加在 cg_scene 之后，固化画风氛围，不含服装",
+    "通用": "cinematic lighting, film grain, bokeh, professional photography, high detail face, perfect detailed eyes, realistic iris and pupils"
+  },
+  "触发词与嵌入": {
+    "LoRA触发词": "",
+    "Textual_Inversion": ""
+  },
+  "技术辅助": {
+    "LoRA": [],
+    "常用_seed": 774411223399112
+  },
+  "参考素材": {
+    "主参考图或文件夹": "",
+    "角色表三视图": "",
+    "多角度面部": ""
+  },
+  "出图配方_默认值": {
+    "sampler": "Euler a",
+    "steps": 30,
+    "cfg": 6,
+    "vae": ""
+  },
+  "负面提示词_通用": "lowres, worst quality, low quality, bad anatomy, bad hands, deformed, extra limbs, blurry, jpeg artifacts, watermark, text, signature, logo, censored, bar censor, mosaic censor, extra fingers, missing fingers, bad proportions, bad perspective",
+  "负面提示词_外貌纠错": "blonde hair, blue eyes, green eyes, red eyes, child, loli, shota, toddler face, baby face, young looking, teen, petite, muscular female, old woman, wrinkled face, grey hair, white hair, bald, no glasses, round glasses, sunglasses, long hair, twintails, ponytail, drill hair, 2girls, multiple girls, multiple people, male, man, deformed eyes, weird eyes, crossed eyes, mismatched eyes, blurry eyes, empty eyes, doll eyes, anime eyes, cartoony eyes, plastic eyes",
+  "负面提示词_服装纠错": "different outfit, outfit change, casual clothes, t-shirt, hoodie, bikini, swimsuit, nude, naked, topless, pantless, no skirt, different skirt, jeans, shorts, overalls, apron",
+  "版本": {
+    "更新日期": "2026-05-03",
+    "变更摘要": "说明首句点名李梅；固化年龄感与概览 30 岁一致"
+  }
+}
